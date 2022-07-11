@@ -6,7 +6,8 @@
     3) ICONS        -> Array
     4) NAVBAR_LINKS -> Array
  */
-$header_db= [
+
+$header_db = [
     "logo" => "./img/Google_logo.png",
     "section_name" => "Privacy & Terms",
     "icons" => [
@@ -20,7 +21,6 @@ $header_db= [
         "Technologies",
         "FAQ"
     ]
-
 ];
 
 
@@ -33,7 +33,8 @@ $header_db= [
     3)SUBPARAGRAPH      -> Array
     4)PARAGRAPHS-TWO    -> Array 
 */
-$db = [
+
+$main_db = [
     [
         "title" => [
             "tag" => "h2",
@@ -91,8 +92,24 @@ $db = [
             "In some cases, yes. When you click on a search result in Google Search, your web browser may also send the Internet address, or URL, of the search results page to the destination web page as the <a href='#'>Referrer URL</a>. The URL of the search results page may sometimes contain the search query that you entered. If you are using SSL Search (Google’s encrypted search functionality), under most circumstances, your search terms will not be sent as part of the URL in the Referrer URL. There are some exceptions to this behaviour, such as if you are using some less popular browsers. More information on SSL Search can be found <a href='#'>here.</a> Search queries or information contained in the Referrer URL may be available via Google Analytics or an application programming interface (API). In addition, advertisers may receive information relating to the exact keywords that triggered an ad click."
         ]
     ]
+];
 
+/* database with the content of the footer section of the website */
+/* It is divided in: 
+    1) FOOTER_LINK      -> Array
+    2)LANGUAGE          -> String
+*/
+
+$footer_db = [
+    "footer_link" => [
+        "Google",
+        "About Google",
+        "Privacy",
+        "Terms"
+    ],
+    "language" => "English"
 ]
+
 
 ?>
 
@@ -110,11 +127,34 @@ $db = [
 
 <body>
     <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
 
+                </div>
+            </div>
+        </div>
     </header>
 
     <body>
-
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <?php foreach($main_db as $main) { 
+                        echo "<" . $main["title"]["tag"] . ">" . $main["title"]["text"] . "</" . $main["title"]["tag"] . ">";
+                        foreach($main["paragraphs"] as $paragraph) {
+                            if(((strpos($paragraph, "<")) < 1) == true && ((strpos($paragraph, ">")) == strlen($paragraph) - 1) == true) {
+                                echo  $paragraph;
+                            } else {
+                                echo "<p>" . $paragraph . "</p>";
+                            }
+                        }
+                        
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
     </body>
     <footer>
 
