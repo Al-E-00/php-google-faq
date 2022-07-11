@@ -140,7 +140,7 @@ $footer_db = [
                 </div>
                 <div class="col d-flex justify-content-end gap-2 p-1">
                     <?php foreach ($header_db["icons"] as $index => $icon) { ?>
-                        <img class="custom-icon-header " src="<?php echo $icon ?>" alt="<?php echo $icon ?>">
+                        <img class="custom-icon-header" src="<?php echo $icon ?>" alt="<?php echo $icon ?>">
                     <?php } ?>
                 </div>
             </div>
