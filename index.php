@@ -173,7 +173,34 @@ $footer_db = [
         </div>
     </body>
     <footer>
+        <div class="container-fluid custom-footer-bg">
+            <div class="row custom-footer-alignment align-items-center">
+                <div class="col">
+                    <?php foreach ($footer_db["footer_link"] as $link) { ?>
+                        <a class="custom-footer-link" href="#"><?php echo $link ?></a>
+                    <?php } ?>
+                </div>
+                <div class="col-3 d-flex justify-content-end">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected><?php echo $footer_db["language"] ?></option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Italian">Italian</option>
+                    </select>
 
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
