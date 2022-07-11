@@ -4,6 +4,7 @@
     1) LOGO         -> String
     2) SECTION_NAME -> String
     3) ICONS        -> Array
+    4) NAVBAR_LINKS -> Array
  */
 $header_db= [
     "logo" => "./img/Google_logo.png",
@@ -28,9 +29,9 @@ $header_db= [
     1) TITLE            -> Array
         - TAG           -> String
         - TEXT          -> String
-    2)PARAGRAPHS        -> 
-    3)SUBPARAGRAPH      -> Object
-    4)PARAGRAPHS-TWO    -> Object 
+    2)PARAGRAPHS        -> Array
+    3)SUBPARAGRAPH      -> Array
+    4)PARAGRAPHS-TWO    -> Array 
 */
 $db = [
     [
