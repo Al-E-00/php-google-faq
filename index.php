@@ -167,6 +167,16 @@ $footer_db = [
                                 echo "<p>" . $paragraph . "</p>";
                             }
                         }
+                        
+                        if (array_key_exists("subparagraph", $main) == true) {
+                            echo "<h3>" . $main["subparagraph"] . "</h3>";
+                        }
+                            
+                        if (array_key_exists("paragraphs-two", $main) == true) {
+                            foreach($main["paragraphs-two"] as $paragraph_two) {
+                                echo "<p>" . $paragraph_two . "</p>";
+                            }
+                        }
                     }
                     ?>
                 </div>
