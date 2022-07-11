@@ -122,15 +122,32 @@ $footer_db = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css' integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==' crossorigin='anonymous' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Google FAQ</title>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-
+        <div class="container-fluid justify-space-between">
+            <div class="row p-2 ">
+                <div class="col d-flex align-items-center">
+                    <img class="custom-logo" src="<?php echo $header_db["logo"] ?>" alt="Google logo">
+                    <p class="m-0 custom-header-text"><?php echo $header_db["section_name"] ?></p>
+                </div>
+                <div class="col d-flex justify-content-end gap-2 p-1">
+                    <?php foreach ($header_db["icons"] as $index => $icon) { ?>
+                        <img class="custom-icon " src="<?php echo $icon ?>" alt="<?php echo $icon ?>">
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="row ps-2 custom-style-border">
+                <div class="col ">
+                    <?php foreach ($header_db["navbar_links"] as $nav_link) { ?>
+                        <a class="custom-nav-link" href="#"><?php echo $nav_link ?></a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -138,18 +155,17 @@ $footer_db = [
 
     <body>
         <div class="container">
-            <div class="row">
+            <div class="row p-5">
                 <div class="col">
-                    <?php foreach($main_db as $main) { 
+                    <?php foreach ($main_db as $main) {
                         echo "<" . $main["title"]["tag"] . ">" . $main["title"]["text"] . "</" . $main["title"]["tag"] . ">";
-                        foreach($main["paragraphs"] as $paragraph) {
-                            if(((strpos($paragraph, "<")) < 1) == true && ((strpos($paragraph, ">")) == strlen($paragraph) - 1) == true) {
+                        foreach ($main["paragraphs"] as $paragraph) {
+                            if (((strpos($paragraph, "<")) < 1) == true && ((strpos($paragraph, ">")) == strlen($paragraph) - 1) == true) {
                                 echo  $paragraph;
                             } else {
                                 echo "<p>" . $paragraph . "</p>";
                             }
                         }
-                        
                     }
                     ?>
                 </div>

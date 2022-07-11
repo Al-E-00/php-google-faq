@@ -1,0 +1,47 @@
+body  {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.custom-logo {
+    width: 4.5rem;
+
+}
+
+.custom-icon:first-child {
+    width: 1rem;
+    height: auto;
+}
+.custom-header-text {
+    font-size: 1.3rem;
+    color: gray;
+    padding-left: 0.3rem;
+}
+
+.custom-icon {
+    width: 2rem;
+}
+
+.custom-nav-link {
+    font-size: .9rem;
+    color: gray;
+    text-decoration: none;
+    padding-inline: 2.5rem;
+    padding-inline-start: 0;
+
+}
+
+/* border for navbar */
+.custom-style-border {
+    position: relative;
+}
+.custom-style-border:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;   
+    width: 100%;
+    height: 1.5px;
+    background-color: rgb(145, 145, 145);
+    margin-top: 0.5rem;
+    z-index: 999;
+}
