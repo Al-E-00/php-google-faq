@@ -131,12 +131,12 @@ $footer_db = [
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid justify-space-between">
+    <header class="header-custom-container">
+        <div class="container-fluid justify-space-between ">
             <div class="row p-2 ">
                 <div class="col d-flex align-items-center">
                     <img class="custom-logo" src="<?php echo $header_db["logo"] ?>" alt="Google logo">
-                    <p class="m-0 custom-header-text"><?php echo $header_db["section_name"] ?></p>
+                    <p class="m-0 custom-header-text pt-0"><?php echo $header_db["section_name"] ?></p>
                 </div>
                 <div class="col d-flex justify-content-end gap-2 p-1">
                     <?php foreach ($header_db["icons"] as $index => $icon) { ?>
