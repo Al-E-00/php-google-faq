@@ -1,4 +1,22 @@
 <?php
+/* database with the content of the header of the website */
+$header_db= [
+    "logo" => "./img/Google_logo.png",
+    "section_name" => "Privacy & Terms",
+    "icons" => [
+        "app-icon" => "./img/dots-menu.svg",
+        "user-icon" => "./img/user-icon.png"
+    ],
+    "navbar_links" => [
+        "Overview",
+        "Privacy Policy",
+        "Terms of Service",
+        "Technologies",
+        "FAQ"
+    ]
+
+];
+
 
 /* database with the content of the main section of the website */
 /* It is divided in: 
