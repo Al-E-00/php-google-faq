@@ -17,7 +17,7 @@ body  {
     padding-left: 0.3rem;
 }
 
-.custom-icon {
+.custom-icon-header {
     width: 2rem;
 }
 
@@ -78,4 +78,9 @@ body  {
 .custom-footer-alignment {
     padding-inline: 9rem;
     padding-block: .3rem;
+}
+
+.custom-icon-footer {
+    color: #3367d6;
+    padding-right: .5rem;
 }

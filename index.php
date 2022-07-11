@@ -125,6 +125,7 @@ $footer_db = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="style.css">
     <title>Google FAQ</title>
 </head>
@@ -139,7 +140,7 @@ $footer_db = [
                 </div>
                 <div class="col d-flex justify-content-end gap-2 p-1">
                     <?php foreach ($header_db["icons"] as $index => $icon) { ?>
-                        <img class="custom-icon " src="<?php echo $icon ?>" alt="<?php echo $icon ?>">
+                        <img class="custom-icon-header " src="<?php echo $icon ?>" alt="<?php echo $icon ?>">
                     <?php } ?>
                 </div>
             </div>
@@ -180,7 +181,8 @@ $footer_db = [
                         <a class="custom-footer-link" href="#"><?php echo $link ?></a>
                     <?php } ?>
                 </div>
-                <div class="col-3 d-flex justify-content-end">
+                <div class="col-3 d-flex justify-content-end align-items-center">
+                    <i class="fa-solid fa-earth-africa fa-lg custom-icon-footer"></i>
                     <select class="form-select" aria-label="Default select example">
                         <option selected><?php echo $footer_db["language"] ?></option>
                         <option value="Spanish">Spanish</option>
