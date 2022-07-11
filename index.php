@@ -1,5 +1,10 @@
 <?php
 /* database with the content of the header of the website */
+/* It is divided in: 
+    1) LOGO         -> String
+    2) SECTION_NAME -> String
+    3) ICONS        -> Array
+ */
 $header_db= [
     "logo" => "./img/Google_logo.png",
     "section_name" => "Privacy & Terms",
@@ -20,10 +25,10 @@ $header_db= [
 
 /* database with the content of the main section of the website */
 /* It is divided in: 
-    1) TITLE            -> Object
+    1) TITLE            -> Array
         - TAG           -> String
         - TEXT          -> String
-    2)PARAGRAPHS        -> Object
+    2)PARAGRAPHS        -> 
     3)SUBPARAGRAPH      -> Object
     4)PARAGRAPHS-TWO    -> Object 
 */
